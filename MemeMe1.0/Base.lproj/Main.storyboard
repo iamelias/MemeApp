@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina6_1" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,11 +15,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MemeMe1_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zbd-0J-pFZ">
-                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <rect key="frame" x="44" y="344" width="808" height="49"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="a4w-Ux-Ibw"/>
                                     <barButtonItem systemItem="camera" id="ggI-NI-CJj"/>
@@ -32,16 +32,20 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Yhw-G0-unf"/>
                                 </items>
                             </toolbar>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kM1-AB-fHZ">
-                                <rect key="frame" x="87" y="317" width="240" height="240"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kM1-AB-fHZ">
+                                <rect key="frame" x="44" y="0.0" width="808" height="393"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="zbd-0J-pFZ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8Ax-qR-Rri"/>
-                            <constraint firstItem="zbd-0J-pFZ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ZpD-u2-py9"/>
-                            <constraint firstItem="zbd-0J-pFZ" firstAttribute="top" secondItem="kM1-AB-fHZ" secondAttribute="bottom" constant="261" id="oVq-Th-fDx"/>
-                            <constraint firstItem="zbd-0J-pFZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zQ6-aC-v4c"/>
+                            <constraint firstItem="kM1-AB-fHZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5yj-YG-0Ph"/>
+                            <constraint firstItem="zbd-0J-pFZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="B9a-T3-jHF"/>
+                            <constraint firstItem="zbd-0J-pFZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XxK-uh-VXP"/>
+                            <constraint firstItem="zbd-0J-pFZ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="hKz-Wi-8XD"/>
+                            <constraint firstItem="zbd-0J-pFZ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="iDO-Pb-UYD"/>
+                            <constraint firstItem="kM1-AB-fHZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qlv-wR-UmI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kM1-AB-fHZ" secondAttribute="trailing" id="vxn-yi-SZM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kM1-AB-fHZ" secondAttribute="bottom" id="xwz-sy-jm6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -51,7 +55,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+            <point key="canvasLocation" x="136.80000000000001" y="138.17733990147784"/>
         </scene>
     </scenes>
 </document>

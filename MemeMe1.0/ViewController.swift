@@ -28,8 +28,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
       func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[.originalImage] as? UIImage {
             imagePickerView.image = image
+            dismiss(animated: true, completion: nil) //closes image picker when image is selected
+
         
     }
+        
+        func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+            
+            dismiss(animated: true, completion: nil) //closes image picker when cancel is clicked
+            
+        }
+
     
 }
 

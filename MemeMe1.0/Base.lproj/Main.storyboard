@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="landscape">
+    <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,14 +15,18 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MemeMe1_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zbd-0J-pFZ">
-                                <rect key="frame" x="44" y="344" width="808" height="49"/>
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="a4w-Ux-Ibw"/>
-                                    <barButtonItem systemItem="camera" id="ggI-NI-CJj"/>
+                                    <barButtonItem systemItem="camera" id="ggI-NI-CJj">
+                                        <connections>
+                                            <action selector="pickImageCamera:" destination="BYZ-38-t0r" id="ssY-ms-Xct"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="yt6-ax-oZV"/>
                                     <barButtonItem title="Album" id="LfX-Y0-cic">
                                         <connections>
@@ -33,29 +37,30 @@
                                 </items>
                             </toolbar>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kM1-AB-fHZ">
-                                <rect key="frame" x="44" y="0.0" width="808" height="393"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="kM1-AB-fHZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5yj-YG-0Ph"/>
+                            <constraint firstItem="kM1-AB-fHZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="5JQ-wb-Hfa"/>
                             <constraint firstItem="zbd-0J-pFZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="B9a-T3-jHF"/>
+                            <constraint firstItem="kM1-AB-fHZ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Ud6-hy-4xs"/>
                             <constraint firstItem="zbd-0J-pFZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XxK-uh-VXP"/>
                             <constraint firstItem="zbd-0J-pFZ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="hKz-Wi-8XD"/>
                             <constraint firstItem="zbd-0J-pFZ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="iDO-Pb-UYD"/>
-                            <constraint firstItem="kM1-AB-fHZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qlv-wR-UmI"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kM1-AB-fHZ" secondAttribute="trailing" id="vxn-yi-SZM"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kM1-AB-fHZ" secondAttribute="bottom" id="xwz-sy-jm6"/>
+                            <constraint firstItem="kM1-AB-fHZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qGs-KU-kRc"/>
+                            <constraint firstItem="zbd-0J-pFZ" firstAttribute="top" secondItem="kM1-AB-fHZ" secondAttribute="bottom" id="wcf-M6-xgp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="cameraButton" destination="ggI-NI-CJj" id="nPQ-oS-6uJ"/>
                         <outlet property="imagePickerView" destination="kM1-AB-fHZ" id="u06-Ri-eb1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="138.17733990147784"/>
+            <point key="canvasLocation" x="136.23188405797103" y="137.94642857142856"/>
         </scene>
     </scenes>
 </document>

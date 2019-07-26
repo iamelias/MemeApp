@@ -18,9 +18,10 @@ class MemeTableViewController: UIViewController, UITableViewDataSource, UITableV
         return appDelegate.memes
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         Table.reloadData() //refreshing tableView controller so meme appears
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

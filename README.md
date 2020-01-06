@@ -1,4 +1,4 @@
-# MemeApp, iOS Developer: Elias H.
+# MemeApp, iOS Developer: Elias Hall.
 
 **Run Instructions:**
 Xcode 10.3, Swift 4.2, iPhone XS

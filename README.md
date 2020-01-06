@@ -1,9 +1,8 @@
 # MemeApp, iOS Developer: Elias H.
-Meme creating app. 
-**************************
 
 **Run Instructions:**
 Xcode 10.3, Swift 4.2 iPhone XS
+
 **Overview:**
 This is a meme creating/saving/sharing app built with UIKit. It stores saved or shared memes in table view and collection view, both interchangable by tab. 
 

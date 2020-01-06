@@ -45,7 +45,6 @@ class MemeColletionViewController: UICollectionViewController {
         self.tabBarController?.tabBar.isHidden = true
         
         self.navigationController!.pushViewController(detailController, animated: true)//pushing to DetailController
-        
     }
 }
 

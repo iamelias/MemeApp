@@ -21,13 +21,12 @@ class MemeTableViewController: UIViewController, UITableViewDataSource, UITableV
     override func viewDidAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         Table.reloadData() //refreshing tableView controller so meme appears
-        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         tableView.rowHeight = 90.0 // setting height of each cell
-        return self.meme.count //getting number of rows in memes array 
+        return self.meme.count //getting number of rows in memes array
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -38,7 +37,6 @@ class MemeTableViewController: UIViewController, UITableViewDataSource, UITableV
         cell.textLabel?.textAlignment = .center // aligning text to be in middle of cell
         cell.imageView?.image = memeRep.memedImage //setting meme image
         
-        
         return cell
     }
     
@@ -48,8 +46,6 @@ class MemeTableViewController: UIViewController, UITableViewDataSource, UITableV
         detailController.memeDetail = self.meme[(indexPath as NSIndexPath).row]//data for detailController
         self.navigationController!.pushViewController(detailController, animated: true) //pushing to detailController
     }
-    
-    
 }
 
 

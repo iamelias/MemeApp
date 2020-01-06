@@ -61,7 +61,6 @@ class memeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         textfield.textAlignment = .center
         
         textfield.text = defaultText //making default "TOP" and "BOTTOM"
-        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -71,12 +70,10 @@ class memeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     @IBAction func pickAlbumImage(_ sender: Any) { //when album button is selected
         pickImageWith(sourceType: UIImagePickerController.SourceType.photoLibrary)
-        
     }
     
     @IBAction func pickCameraImage(_ sender: Any) { //when camera button is selected
         pickImageWith(sourceType: UIImagePickerController.SourceType.camera)
-        
     }
     
     func pickImageWith(sourceType: UIImagePickerController.SourceType) { //opens album/camera for image pick
@@ -84,7 +81,6 @@ class memeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         pickImage.delegate = self
         pickImage.sourceType = sourceType
         present(pickImage, animated:true, completion:nil)
-        
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -116,11 +112,8 @@ class memeEditorViewController: UIViewController, UIImagePickerControllerDelegat
             if textField.text == "TOP" || textField.text == "BOTTOM" {
                 textField.text = ""
             }
-            
         }
     }
-    
-    
     
     func textFieldDidEndEditing(_ textField: UITextField) {
     }
@@ -130,7 +123,6 @@ class memeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         
         //notification of when keyboard will dissapear
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
-        
     }
     
     func unsubscribeFromKeyboardNotifications() {
@@ -157,7 +149,6 @@ class memeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     @objc func keyboardWillHide(_ notification:Notification) { //shifting view back to normal when keyboard is gone
         view.frame.origin.y = 0
-        
     }
     
     func textFieldShouldReturn(_ textfield: UITextField) -> Bool { //dismisses keyboard with return
@@ -191,16 +182,12 @@ class memeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         //calling save meme when share has successfully completed
         activityController.completionWithItemsHandler = { (activityType: UIActivity.ActivityType?, completed: Bool, returnedItems: [Any]?, error: Error?) -> Void in
             if completed {
-                self.save(finishedMeme) //passing finished Meme to be saved
-
-                
+                self.save(finishedMeme) //passing finished Meme to be save
             }
             else {
                 print("Didn't save")
             }
         }
-        
-        
     }
     
     func save(_ memedImage: UIImage) { //saving meme to instance of Meme Struct
@@ -210,9 +197,7 @@ class memeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         let object = UIApplication.shared.delegate
         let appDelegate = object as! AppDelegate
         appDelegate.memes.append(meme)
-            
     }
-    
 }
 
 struct Meme { //using struct to save data in meme instance in the View Controller's save function
@@ -227,12 +212,7 @@ struct Meme { //using struct to save data in meme instance in the View Controlle
         self.bottomText = bottomText
         self.originalImage = originalImage
         self.memedImage = memedImage
-        
-        
     }
-    
-    
-    
 }
 
 

@@ -2,27 +2,26 @@
 Meme creating app. 
 **************************
 
-
+**Run Instructions:**
+Xcode 10.3, Swift 4.2 iPhone XS
 **Overview:**
-This app is built using UIKIt to be a meme creating/saving/sharing app. It stores saved/shared Memes in a table view and a collection view, both interchangable by tab. Contains 1 Tab Bar Controller, 2 Navigation Controllers, 1 Table View Controller, 1 Collection View Controller, and 2 View Controllers.
+This is a meme creating/saving/sharing app built with UIKit. It stores saved or shared memes in table view and collection view, both interchangable by tab. 
 
-**MemeTableViewController.swift:**
-Accesses saved Meme Array in appDelegate.swift. Table row height is set to 90.0. Pushes to MemeDetailViewController when row is selected. Can switch to MemeCollectionViewController through tab on bottom. Presents Modally MemeEditorViewController.swift to add Meme
-
-**MemeCollectionViewController.swift:**
-Accesses saved Meme Array in appDelegate.swift. Pushes to MemeDetailViewController when row is selected. Can switch to MemeTableViewController through tab on bottom. Presents Modally MemeEditorViewController.swift to add Meme
-
-**MemeCollectionViewCell.swift:**
-Used by MemeCollectionViewController.swift to connect reusable cell
-
-**MemeEditorViewController.swift:**
-Meme is created using ImagePickerController and by editing text. Meme is sent/saved using UIActivityViewController, When meme is saved/sent it's properties are stored in a Meme's Struct. Meme's structs properties are accessed and saved in Meme Array in appDelegate.Swift for access by the MemeCollectionViewController.swift and MemeTableViewController.swift. "Cancel" UIButton resets the meme and dismisses the MemeEditorViewController.
-
-**MemeDetailController.swift:**
-Shows an enlarged version of the image in the table/collection view. hides tab bar.
-
-**AppDelegate.swift:**
-Stores saved and updated memes to be used by MemeCollectionViewController.swift and MemeTableViewController.swift
+**Walkthrough:**
+User is presented with an empty table and empty collection view, in interchangeable tab format. User taps on top right plus/add button to bring up Meme Editor. User then select the "album" button to select their meme's photo. When photo has been selected the share icon/button becomes active. User then taps on a text field to change it to its desired text. User taps on share icon/button to save and/or share photo, using the activity controller. User then hits cancel to return to table view. Note: User can select cancel at any time. If photo is saved or shared, the table view and collection view are automatically updated with the memed photo.
 
 **info.plist:**
 Added Privacy- Photo Library Additions Usage Descriptions, Privacy- Photo Library Usage Description, Privacy- Camera Usage Description so app can work on physical device
+
+**Tools used:** **Xcode 10.3, Swift 4.2, UIKit, iPhone XS simulator** 
+
+<p float="left">
+<img src = "Images/Screenshot1.png" width="100" height="200">
+<img src = "Images/Screenshot2.png" width="100" height="200">
+<img src = "Images/Screenshot3.png" width="100" height="200">
+<img src = "Images/Screenshot4.png" width="100" height="200">
+<img src = "Images/Screenshot5.png" width="100" height="200">
+<img src = "Images/Screenshot6.png" width="100" height="200">
+<img src = "Images/Screenshot7.png" width="100" height="200">
+<img src = "Images/Screenshot8.png" width="100" height="200">
+</p>
